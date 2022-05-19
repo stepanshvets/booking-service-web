@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add apartment</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/api/apartments}" th:object="${apartment}">
+    <label for="address">Enter address: </label>
+    <input type="text" th:field="*{address}" id="address"/>
+    <br/>
+    <label for="seats">Enter number of beds: </label>
+    <input type="text" th:field="*{seats}" id="seats"/>
+    <br/>
+    <input type="submit" value="Add"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Apartments</title>
+</head>
+<body>
+
+<div th:each="apartment : ${apartments}">
+    <a th:href="@{apartments/{id}(id=${apartment.getId()})}"
+       th:text="${apartment.getId() + ', ' + apartment.getAddress() + ', '
+    + apartment.getSeats()}">user</a>
+</div>
+
+</body>
+</html>
